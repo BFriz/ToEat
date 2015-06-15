@@ -1,8 +1,8 @@
-$function(){
+$(function(){
 // getting the food and stuff
-  Food.all();
+  // Food.all();
   
-}
+});
 
 function View() {};
 View.init = function() {
@@ -14,4 +14,4 @@ View.init = function() {
     var foodParams = $(this).serialize();
     Food.create(foodParams);
   });
-}
+};
