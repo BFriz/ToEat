@@ -28,7 +28,7 @@ var foods =[
 // root path
 app.get("/", function (req, res){
   // render index.html
-  res.sendFile(path.join(__dirname + '/public/views/index.html'));
+  res.sendFile(path.join(__dirname + '/public/views/home.html'));
 });
  
 // foods index path
@@ -44,7 +44,7 @@ app.post("/foods", function (req, res){
   // add new food to DB (array, really...)
   foods.push(newFood);
   // send a response with newly created object
-  res.send(newFood);
+  res.send(JSON.stringify(newFood));
 });
  
 app.delete("/foods/:id", function (req, res){
